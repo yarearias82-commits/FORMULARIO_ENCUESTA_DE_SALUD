@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta de Salud</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>🩺 Encuesta de Salud</h1>
+  <p>Completa la información solicitada</p>
+
+  <form id="formSalud">
+
+    <!-- Edad -->
+    <label>Edad:</label>
+    <input type="number" min="1" max="120" required>
+
+    <!-- Peso -->
+    <label>Peso (kg):</label>
+    <input type="number" min="20" max="200" required>
+
+    <!-- Nivel de dolor -->
+    <label>Nivel de dolor: <span id="valorDolor">5</span></label>
+    <input type="range" min="0" max="10" value="5" id="dolor">
+
+    <!-- Tipo de sangre -->
+    <label>Tipo de sangre:</label>
+    <select required>
+      <option value="">Selecciona una opción</option>
+      <option>A+</option>
+      <option>A-</option>
+      <option>B+</option>
+      <option>B-</option>
+      <option>AB+</option>
+      <option>AB-</option>
+      <option>O+</option>
+      <option>O-</option>
+    </select>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <p id="mensaje"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
